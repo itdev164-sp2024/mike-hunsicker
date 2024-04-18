@@ -13,7 +13,6 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
   background: ${({ theme }) => theme.variants.header.primary.backgroundColor};
 `
 
