@@ -5,7 +5,6 @@ import styled from 'styled-components'
 import { Box, Card, Heading } from 'rebass'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
 
 const Grid = styled(Box)`
   box-sizing: border-box;
@@ -18,10 +17,10 @@ const Grid = styled(Box)`
 
 const IndexPage = ( {data} ) => (
   <Layout>
-    <Grid width={[1, 2/3, 7/8]} p={2} className={styles.list}>
+    <Grid width={[1, 2/3, 7/8]} p={2}>
     {
       data.allContentfulBlogPost.edges.map(edge => (
-        <Card key={edge.node.id}>
+        <Card width={256} p={3} key={edge.node.id}>
           <Link to={edge.node.slug}>
             <GatsbyImage
               image={edge.node.heroImage.gatsbyImageData}
