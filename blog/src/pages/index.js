@@ -17,7 +17,7 @@ const Grid = styled(Box)`
 
 const IndexPage = ( {data} ) => (
   <Layout>
-    <Grid width={[1, 2/3, 7/8]} p={2}>
+    <Grid>
     {
       data.allContentfulBlogPost.edges.map(edge => (
         <Card width={256} p={3} key={edge.node.id}>
